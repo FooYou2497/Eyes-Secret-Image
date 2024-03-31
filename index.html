@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="script.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <title>Eyes Secret Image</title>
+</head>
+<body>
+    <label for="textInput">Input:</label>
+    <textarea id="textInput" class="form-control" rows="10" cols="50"></textarea><br>
+    <button class="btn btn-primary" onclick="generateSecretImage()">Generate</button>
+    <button class="btn btn-success" onclick="downloadImage()">Download</button>
+    <div id="secretImageContainer" class="mt-3"><canvas></canvas></div>
+</body>
+</html>
