@@ -11,7 +11,7 @@ const eyesCrop = {
   "4": [44, 0, 55, 7]
 };
 
-const point = [0, 3, 1, 4];
+// const point = [0, 3, 1, 4];
 
 function getLineWidth(line) {
     return line.length * 6 + 6;
@@ -40,18 +40,18 @@ function getLineWidth(line) {
       [...line].forEach((char, j) => {
         const [sx, sy, ex, ey] = eyesCrop[char];
         const pic_letter = eyes;
-        ctx.drawImage(pic_letter, sx, sy, ex - sx, ey - sy, margin + pos.x, margin + pos.y, 11, 7);
-        const pic_point = eyes;
+        ctx.drawImage(pic_letter, sx, sy, ex - sx, ey - sy, margin + pos.x, margin + pos.y, ex - sx, ey);
+        // const pic_point = eyes;
         if (j % 2 === 0) {
-          if (i !== 0) {
+          // if (i !== 0) {
             // ctx.drawImage(pic_point, point[0], point[1], point[2], point[3], margin + pos.x + 10, margin + pos.y, 1, 4);
-          }
-          if (j !== 0) {
-            if (i !== 0) {
+          // }
+          // if (j !== 0) {
+            // if (i !== 0) {
               // ctx.drawImage(pic_point, point[0], point[1], point[2], point[3], margin + pos.x, margin + pos.y, 1, 4);
-            }
+            // }
             // ctx.drawImage(pic_point, point[0], point[1], point[2], point[3], margin + pos.x, margin + pos.y + 6, 1, 4);
-          }
+          // }
           pos.y += 6;
         } else {
           // ctx.drawImage(pic_point, point[0], point[1], point[2], point[3], margin + pos.x, margin + pos.y, 1, 4);
