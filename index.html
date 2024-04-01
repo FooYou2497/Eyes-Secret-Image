@@ -3,16 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="eye.ico" type="image/x-icon">
   <script src="script.js"></script>
   <script src="bootstrap.min.js"></script>
   <link rel="stylesheet" href="bootstrap.min.css">
   <title>Eyes Secret Image</title>
 </head>
 <body>
-    <label for="textInput">Input:</label>
-    <textarea id="textInput" class="form-control" rows="10" cols="50"></textarea><br>
-    <button class="btn btn-primary" onclick="generateSecretImage()">Generate</button>
-    <button class="btn btn-success" onclick="downloadImage()">Download</button>
-    <div id="secretImageContainer" class="mt-3"><canvas></canvas></div>
+    <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-6">
+            <label for="textInput">Input:</label>
+            <textarea id="textInput" class="form-control" rows="10" cols="50"></textarea><br>
+            <button class="btn btn-primary" onclick="generateSecretImage()">Generate</button>
+            <button class="btn btn-success" onclick="downloadImage()">Download</button><br>
+            <ol>0-neutral, 1-up, 2-right, 3-down, and 4-left, ENTER represents end of line</ol>
+            <ol>Noita Wiki : <a href="https://noita.wiki.gg/wiki/Eye_Messages">Eye Mseeages</a></ol>
+            <ol>Github Project : <a href="https://github.com/FooYou2497/Eyes-Secret-Image">repository</a></ol>
+            <ol style="color: white;"><p style="color: white">If you are in dark mode, you will not be able to see the image generated on the right</p></ol>
+          </div>
+        <div class="col-md-6">
+            <label for="output">Output:</label>
+            <div id="secretImageContainer" class="mt-3"><canvas></canvas></div>
+        </div>
+        </div>
+    </div>
 </body>
 </html>
